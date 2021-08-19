@@ -1,6 +1,7 @@
 - 第一步 打开windows命令行，查看本地网络情况：ipconfig
 
   ![](images/windows查看ip.png)
+  <img src="images/windows查看ip.png"  style="margin-left:450px">
 
 - 第二步：虚拟机网络设置为NAT模式：
   ![](images/虚拟机网络适配器设置.png)
@@ -52,6 +53,7 @@
 > ![](images/1.png)
 >
 > 解决办法：
+> 
 > ①[failed-to-start-lsb-bring-up-down-networking](https://www.cyberithub.com/failed-to-start-lsb-bring-up-down-networking/)
 >
 > ②[各种姿势解决CentOS 7下无法启动网络的问题](https://cloud.tencent.com/developer/article/1354933)
