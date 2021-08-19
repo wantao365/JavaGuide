@@ -13,8 +13,6 @@
   点击NAT设置，将网关设置一致：
   
   ![](images/VMware虚拟网络网关设置.png)
-
-  <img src="images/VMware虚拟网络网关设置.png"  style="margin-left:450px">
   
 - 第四步：本地网络适配器设置虚拟机虚拟网络
   
