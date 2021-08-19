@@ -45,13 +45,17 @@ Linux系统的应用非常广泛，不仅可以长时间的运行我们编写的
 
 ```shell
 # 切换到该目录下usr目录 
-[root@localhost ~]# cd usr			
+[root@localhost ~]# cd usr	
+
 # 切换到上一层目录 
-[root@localhost ~]# cd ../			
+[root@localhost ~]# cd ../	
+
 # 切换到系统根目录 	
-[root@localhost ~]# cd /		
+[root@localhost ~]# cd /
+
 # 切换到用户主目录 
-[root@localhost ~]# cd ~		
+[root@localhost ~]# cd ~	
+
 # 切换到上一个所在目录
 [root@localhost ~]# cd -		
 ```
@@ -74,8 +78,10 @@ Linux系统的应用非常广泛，不仅可以长时间的运行我们编写的
 ```shell
 # 示例：在根目录 / 下使用ls，可以看到该目录下的所有的目录和文件
 [root@localhost ~]# ls
+
 # 示例：在根目录 / 下使用ls -a，可以看到该目录下的所有文件和目录，包括隐藏的
 [root@localhost ~]# ls -a
+
 # 示例：在根目录 / 下使用ls -l，可以看到该目录下的所有目录和文件的详细信息。注意：ls -l 可以缩写成ll
 [root@localhost ~]# ls -l
 ```
@@ -131,6 +137,7 @@ Linux系统的应用非常广泛，不仅可以长时间的运行我们编写的
 ```shell
 # 示例：删除/usr下的newTest，进入/usr下使用rm -r newTest
 [root@localhost ~]# rm -r newTest
+
 # 示例：删除/test下的newTest而不需要询问强制删除，在/test下使用rm -rf newTest
 [root@localhost ~]# rm -rf newTest
 ```
@@ -155,10 +162,13 @@ Linux系统的应用非常广泛，不仅可以长时间的运行我们编写的
 ```shell
 # 示例：使用cat查看/etc/sudo.conf文件，只能显示最后一屏内容
 [root@localhost ~]# cat /etc/sudo.conf
+
 # 示例：使用more查看/etc/sudo.conf文件，可以显示百分比，回车可以向下一行，空格可以向下一页，q可以退出查看
 [root@localhost ~]# more /etc/sudo.conf
+
 # 示例：使用less查看/etc/sudo.conf文件，可以使用键盘上的PgUp和PgDn向上 和向下翻页，q结束查看
 [root@localhost ~]# less /etc/sudo.conf
+
 # 示例：使用tail -10 查看/etc/sudo.conf文件的后10行，Ctrl+C结束
 [root@localhost ~]# tail -f ../logs/catalina.out
 [root@localhost ~]# tail -n 20 ../logs/catalina.out
@@ -218,14 +228,14 @@ Linux系统的应用非常广泛，不仅可以长时间的运行我们编写的
   > v：显示运行过程
   >
   > f：指定文件名
-
-```shell
-# 示例：打包并压缩/test下的所有文件 压缩后的压缩包指定名称为xxx.tar.gz  
-[root@localhost ~]# tar -zcvf xxx.tar.gz aaa.txt bbb.txt ccc.txt  
-#或：  
-[root@localhost ~]# tar -zcvf xxx.tar.gz /usr/test/*
-```
-
+  
+  ```shell
+  # 示例：打包并压缩/test下的所有文件 压缩后的压缩包指定名称为xxx.tar.gz  
+  [root@localhost ~]# tar -zcvf xxx.tar.gz aaa.txt bbb.txt ccc.txt  
+  #或：  
+  [root@localhost ~]# tar -zcvf xxx.tar.gz /usr/test/*
+  ```
+  
 - 解压压缩包
 
   > 命令：tar [-xvf] 压缩文件
@@ -235,6 +245,7 @@ Linux系统的应用非常广泛，不仅可以长时间的运行我们编写的
   ```shell
   # 示例：将/test下的xxx.tar.gz解压到当前目录下
   [root@localhost ~]# tar -xvf xxx.tar.gz
+  
   # 示例：将/test下的xxx.tar.gz解压到根目录/usr下
   # -C代表指定解压的位置
   [root@localhost ~]# tar -xvf xxx.tar.gz -C /usr
@@ -257,6 +268,7 @@ Linux系统的应用非常广泛，不仅可以长时间的运行我们编写的
 ```shell
 # 显示所有的进程
 [root@localhost ~]# ps -ef
+
 # 管道命令搜索指定进程
 [root@localhost ~]# ps -ef | grep java
 ```
@@ -276,6 +288,7 @@ Linux系统的应用非常广泛，不仅可以长时间的运行我们编写的
 ```shell
 # 示例：搜索/usr/sudu.conf文件中包含字符串to的行
 [root@localhost etc]# grep to sudo.conf --color
+
 # 示例：搜索/usr/sudu.conf文件中包含字符串to的行 to要高亮显示
 [root@localhost etc]# grep to sudo.conf
 ```
@@ -296,8 +309,10 @@ Linux系统的应用非常广泛，不仅可以长时间的运行我们编写的
 ```shell
 # 查看当前系统的网卡信息：ifconfig
 [root@localhost ~]# ifconfig
+
 # 查看与某台机器的连接情况：ping
 [root@localhost ~]# ping 192.169.0.0.1
+
 # 查看当前系统的端口使用：netstat -an
 [root@localhost ~]# netstat -an
 ```
@@ -307,18 +322,24 @@ Linux系统的应用非常广泛，不仅可以长时间的运行我们编写的
 ```shell
 # 重启命令：reboot
 [root@localhost ~]# reboot
+
 # 立即关机：halt
 [root@localhost ~]# halt
+
 # 注销：exit
 [root@localhost ~]# exit
+
 # 立刻重启(root用户使用)
-[root@localhost ~]# shutdown -r now       
+[root@localhost ~]# shutdown -r now   
+
 # 立刻关机(root用户使用)。
-# [root@localhost ~]# shutdown -h now    
+[root@localhost ~]# shutdown -h now   
+
 #  10分钟后自动关机。   
-# [root@localhost ~]# shutdown -h 10   
+[root@localhost ~]# shutdown -h 10   
+
 # 在时间为20:35时候重启(root用户使用)   
-# [root@localhost ~]# shutdown -r 20:35     
+[root@localhost ~]# shutdown -r 20:35     
 ```
 
 # 4、Linux权限与分配
@@ -327,7 +348,7 @@ Linux系统的应用非常广泛，不仅可以长时间的运行我们编写的
 
 ```shell
 # 示例：在随意某个目录下ls -l
-# [root@localhost local]# ls -l
+[root@localhost local]# ls -l
 总用量 0
 drwxr-xr-x. 2 root root 134 8月  18 10:07 
 bindrwxr-xr-x. 2 root root   6 4月  11 2018 
@@ -379,6 +400,7 @@ sharedrwxr-xr-x. 2 root root   6 4月  11 2018 src
 ```shell
 # 示例：修改/test下的aaa.txt的权限为属主有全部权限，属主所在的组有读写权限，其他用户只有读的权限
 [root@localhost ~]# chmod u=rwx,g=rw,o=r aaa.txt
+
 # 上述示例还可以使用数字表示：
 [root@localhost ~]# chmod 764 aaa.txt
 ```
@@ -390,14 +412,19 @@ sharedrwxr-xr-x. 2 root root   6 4月  11 2018 src
 ```shell
 # 添加用户组
 [root@localhost ~]# groupadd dev
+
 # 修改组
 [root@localhost ~] groupmod -n dev  dev1 
+
 # 删除用户组
 [root@localhost ~]# groupdel dev
+
 # 查询组
+
 [root@localhost ~]# cat /etc/group 
 # 或者使用管道来精确查询 
 [root@localhost ~]# cat /etc/group | grep dev
+
 # 查看当前登录用户所在的组 groups
 [root@localhost ~]# groups someuser
 ```
@@ -434,24 +461,33 @@ sharedrwxr-xr-x. 2 root root   6 4月  11 2018 src
 # 修改用户 
 # 示例：修改和创建密码 passwd 用户名    如果不加用户名则默认修改当前登录者的密码
 [root@localhost ~]# passwd test1   输入两次newpwd
+
 # 示例：将test用户的登录目录改成/home/test，并加入test2组，注意这里是大G。
 [root@localhost ~]# usermod -d /home/test -G test2 test 
+
 # 示例：将用户test加入到test2组
 [root@localhost ~]#  gpasswd -a test test2 
+
 # 示例：将用户test从test2组中移出
 [root@localhost ~]# gpasswd -d test test2 
+
 # 设置用户不能修改密码
 [root@localhost ~]# passwd -l test1     //在root下，禁止test1用户修改密码的权限
 [root@localhost ~]# passwd -d test1    //删除test1的密码
 [root@localhost ~]# passwd -S test1     //查看test1的密码
 
-# 删除用户：[root@localhost ~]# userdel username  
+# 删除用户：
 # 删除用户username
-[root@localhost ~]# rm -rf username   
+[root@localhost ~]# userdel username  
+
 # 删除用户username所在目录
-# 查看用户# 示例： 查看当前登录的所有用户
+[root@localhost ~]# rm -rf username   
+
+# 查看用户
+# 示例： 查看当前登录的所有用户
 [root@localhost ~]# w
 [root@localhost ~]# who
+
 # 示例：查看当前登录用户名
 [root@localhost ~]# whoami
 ```
@@ -491,6 +527,7 @@ sharedrwxr-xr-x. 2 root root   6 4月  11 2018 src
 ```shell
 # 开机自启动防火墙
 [root@localhost ~]# systemctl enable firewalld
+
 # 禁止开机启动防火墙
 [root@localhost ~]# systemctl disable firewalld
 ```
