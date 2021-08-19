@@ -20,7 +20,7 @@ Linux系统的应用非常广泛，不仅可以长时间的运行我们编写的
 
 (3)Linux发行版本不同，又可以分为n多种：
 
-![](images/1-1.png)
+![](images/Linux的分类.png)
 
 # 3、linux常用命令
 
