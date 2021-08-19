@@ -3,20 +3,23 @@
   ![](images/windows查看ip.png)
 
 - 第二步：虚拟机网络设置为NAT模式：
+  
   ![](images/虚拟机网络适配器设置.png)
   
 - 第三步 打开VMware虚拟网络编辑器
+  
   ![](images/VMware虚拟网络编辑.png)
   
   点击NAT设置，将网关设置一致：
   
   ![](images/VMware虚拟网络网关设置.png)
+
+  <img src="images/VMware虚拟网络网关设置.png"  style="margin-left:450px">
   
 - 第四步：本地网络适配器设置虚拟机虚拟网络
+  
   ![](images/本地网络适配器设置虚拟机虚拟网络.png)
 
-  <img src="images/本地网络适配器设置虚拟机虚拟网络.png"  style="margin-left:450px">
-  
 - 第五步：centos网络配置
   ①.打开centos网卡信息：```/etc/sysconfig/network-scripts```
   ②.修改不部分配置：```vi ifcfg-ens33```
