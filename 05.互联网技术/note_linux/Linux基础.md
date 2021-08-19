@@ -142,7 +142,8 @@ Linux系统的应用非常广泛，不仅可以长时间的运行我们编写的
 > 命令：touch 文件名称 ----- 空文件
 
 ```shell
-# 示例：在test目录下创建一个空文件 touch aaa.txt[root@localhost ~]#touch aaa.txt
+# 示例：在test目录下创建一个空文件 touch aaa.txt
+[root@localhost ~]#touch aaa.txt
 ```
 
 ### 3.3.2、文件的查看
@@ -152,7 +153,15 @@ Linux系统的应用非常广泛，不仅可以长时间的运行我们编写的
 > 注意：命令 tail -f 文件 可以对某个文件进行动态监控，例如tomcat的日志文件，会随着程序的运行，日志会变化，可以使用tail -f catalina-2016-11-11.log 监控文件的变化
 
 ```shell
-# 示例：使用cat查看/etc/sudo.conf文件，只能显示最后一屏内容[root@localhost ~]# cat /etc/sudo.conf# 示例：使用more查看/etc/sudo.conf文件，可以显示百分比，回车可以向下一行，空格可以向下一页，q可以退出查看[root@localhost ~]# more /etc/sudo.conf# 示例：使用less查看/etc/sudo.conf文件，可以使用键盘上的PgUp和PgDn向上 和向下翻页，q结束查看[root@localhost ~]# less /etc/sudo.conf# 示例：使用tail -10 查看/etc/sudo.conf文件的后10行，Ctrl+C结束[root@localhost ~]# tail -f ../logs/catalina.out[root@localhost ~]# tail -n 20 ../logs/catalina.out
+# 示例：使用cat查看/etc/sudo.conf文件，只能显示最后一屏内容
+[root@localhost ~]# cat /etc/sudo.conf
+# 示例：使用more查看/etc/sudo.conf文件，可以显示百分比，回车可以向下一行，空格可以向下一页，q可以退出查看
+[root@localhost ~]# more /etc/sudo.conf
+# 示例：使用less查看/etc/sudo.conf文件，可以使用键盘上的PgUp和PgDn向上 和向下翻页，q结束查看
+[root@localhost ~]# less /etc/sudo.conf
+# 示例：使用tail -10 查看/etc/sudo.conf文件的后10行，Ctrl+C结束
+[root@localhost ~]# tail -f ../logs/catalina.out
+[root@localhost ~]# tail -n 20 ../logs/catalina.out
 ```
 
 ### 3.3.3、文件的内容修改
@@ -160,7 +169,8 @@ Linux系统的应用非常广泛，不仅可以长时间的运行我们编写的
 > 命令：vim 文件
 
 ```shell
-# 示例：编辑/test下的aaa.txt文件，使用vim aaa.txt[root@localhost ~]# vim aaa.txt
+# 示例：编辑/test下的aaa.txt文件，使用vim aaa.txt
+[root@localhost ~]# vim aaa.txt
 ```
 
 但此时并不能编辑，因为此时处于命令模式，点击键盘i/a/o进入编辑模式，可以 编辑文件编辑完成后，按下Esc，退回命令模式；此时文件虽然已经编辑完成，但是没有保存，需输入冒号：进入底行模式，在底行模 式下输入wq代表写入内容并退出，即保存；输入q!代表强制退出不保存。
@@ -210,7 +220,10 @@ Linux系统的应用非常广泛，不仅可以长时间的运行我们编写的
   > f：指定文件名
 
 ```shell
-  # 示例：打包并压缩/test下的所有文件 压缩后的压缩包指定名称为xxx.tar.gz  [root@localhost ~]# tar -zcvf xxx.tar.gz aaa.txt bbb.txt ccc.txt  或：  [root@localhost ~]# tar -zcvf xxx.tar.gz /usr/test/*
+# 示例：打包并压缩/test下的所有文件 压缩后的压缩包指定名称为xxx.tar.gz  
+[root@localhost ~]# tar -zcvf xxx.tar.gz aaa.txt bbb.txt ccc.txt  
+#或：  
+[root@localhost ~]# tar -zcvf xxx.tar.gz /usr/test/*
 ```
 
 - 解压压缩包
@@ -220,7 +233,11 @@ Linux系统的应用非常广泛，不仅可以长时间的运行我们编写的
   > 其中：x：代表解压
 
   ```shell
-  # 示例：将/test下的xxx.tar.gz解压到当前目录下[root@localhost ~]# tar -xvf xxx.tar.gz# 示例：将/test下的xxx.tar.gz解压到根目录/usr下# --C代表指定解压的位置[root@localhost ~]# tar -xvf xxx.tar.gz -C /usr
+  # 示例：将/test下的xxx.tar.gz解压到当前目录下
+  [root@localhost ~]# tar -xvf xxx.tar.gz
+  # 示例：将/test下的xxx.tar.gz解压到根目录/usr下
+  # -C代表指定解压的位置
+  [root@localhost ~]# tar -xvf xxx.tar.gz -C /usr
   ```
 
 ## 3.4 、其他命令
@@ -238,7 +255,10 @@ Linux系统的应用非常广泛，不仅可以长时间的运行我们编写的
 > 命令：ps -ef 
 
 ```shell
-# 显示所有的进程[root@localhost ~]# ps -ef# 管道命令搜索指定进程[root@localhost ~]# ps -ef | grep java
+# 显示所有的进程
+[root@localhost ~]# ps -ef
+# 管道命令搜索指定进程
+[root@localhost ~]# ps -ef | grep java
 ```
 
 ### 3.4.3、关闭进程
@@ -254,7 +274,10 @@ Linux系统的应用非常广泛，不仅可以长时间的运行我们编写的
 > 命令：grep 要搜索的字符串 要搜索的文件
 
 ```shell
-# 示例：搜索/usr/sudu.conf文件中包含字符串to的行[root@localhost etc]# grep to sudo.conf --color# 示例：搜索/usr/sudu.conf文件中包含字符串to的行 to要高亮显示[root@localhost etc]# grep to sudo.conf
+# 示例：搜索/usr/sudu.conf文件中包含字符串to的行
+[root@localhost etc]# grep to sudo.conf --color
+# 示例：搜索/usr/sudu.conf文件中包含字符串to的行 to要高亮显示
+[root@localhost etc]# grep to sudo.conf
 ```
 
 ### 3.4.5、管道命令
@@ -262,7 +285,8 @@ Linux系统的应用非常广泛，不仅可以长时间的运行我们编写的
 > 命令：| 将前一个命令的输出作为本次目录的输入
 
 ```shell
-# 示例：查看当前系统中所有的进程中包括system字符串的进程[root@localhost etc]# ps -ef | grep system
+# 示例：查看当前系统中所有的进程中包括system字符串的进程
+[root@localhost etc]# ps -ef | grep system
 ```
 
 ### 3.4.6、网络通信命令
@@ -270,13 +294,31 @@ Linux系统的应用非常广泛，不仅可以长时间的运行我们编写的
 > 命令：ifconfig、ping、netstat
 
 ```shell
-# 查看当前系统的网卡信息：ifconfig[root@localhost ~]# ifconfig# 查看与某台机器的连接情况：ping[root@localhost ~]# ping 192.169.0.0.1# 查看当前系统的端口使用：netstat -an[root@localhost ~]# netstat -an
+# 查看当前系统的网卡信息：ifconfig
+[root@localhost ~]# ifconfig
+# 查看与某台机器的连接情况：ping
+[root@localhost ~]# ping 192.169.0.0.1
+# 查看当前系统的端口使用：netstat -an
+[root@localhost ~]# netstat -an
 ```
 
 ### 3.4.7、关机与重启
 
 ```shell
-# 重启命令：reboot[root@localhost ~]# reboot# 立即关机：halt[root@localhost ~]# halt# 注销：exit[root@localhost ~]# exit[root@localhost ~]# shutdown -r now       立刻重启(root用户使用)[root@localhost ~]# shutdown -h now       立刻关机(root用户使用)。[root@localhost ~]# shutdown -h 10        10分钟后自动关机。[root@localhost ~]# shutdown -r 20:35     在时间为20:35时候重启(root用户使用)
+# 重启命令：reboot
+[root@localhost ~]# reboot
+# 立即关机：halt
+[root@localhost ~]# halt
+# 注销：exit
+[root@localhost ~]# exit
+# 立刻重启(root用户使用)
+[root@localhost ~]# shutdown -r now       
+# 立刻关机(root用户使用)。
+# [root@localhost ~]# shutdown -h now    
+#  10分钟后自动关机。   
+# [root@localhost ~]# shutdown -h 10   
+# 在时间为20:35时候重启(root用户使用)   
+# [root@localhost ~]# shutdown -r 20:35     
 ```
 
 # 4、Linux权限与分配
@@ -284,7 +326,21 @@ Linux系统的应用非常广泛，不仅可以长时间的运行我们编写的
 权限是Linux中的重要概念，每个文件/目录等都具有权限，通过ls -l命令我们可以 查看某个目录下的文件或目录的权限。
 
 ```shell
-# 示例：在随意某个目录下ls -l[root@localhost local]# ls -l总用量 0drwxr-xr-x. 2 root root 134 8月  18 10:07 bindrwxr-xr-x. 2 root root   6 4月  11 2018 etcdrwxr-xr-x. 2 root root   6 4月  11 2018 gamesdrwxr-xr-x. 2 root root   6 4月  11 2018 includedrwxr-xr-x. 2 root root  39 8月  17 18:20 influxdbdrwxr-xr-x. 2 root root   6 4月  11 2018 libdrwxr-xr-x. 2 root root   6 4月  11 2018 lib64drwxr-xr-x. 2 root root   6 4月  11 2018 libexecdrwxr-xr-x. 3 root root  51 8月  18 10:04 redisdrwxr-xr-x. 2 root root   6 4月  11 2018 sbindrwxr-xr-x. 5 root root  49 8月   9 22:42 sharedrwxr-xr-x. 2 root root   6 4月  11 2018 src
+# 示例：在随意某个目录下ls -l
+# [root@localhost local]# ls -l
+总用量 0
+drwxr-xr-x. 2 root root 134 8月  18 10:07 
+bindrwxr-xr-x. 2 root root   6 4月  11 2018 
+etcdrwxr-xr-x. 2 root root   6 4月  11 2018 
+gamesdrwxr-xr-x. 2 root root   6 4月  11 2018 
+includedrwxr-xr-x. 2 root root  39 8月  17 18:20 
+influxdbdrwxr-xr-x. 2 root root   6 4月  11 2018 
+libdrwxr-xr-x. 2 root root   6 4月  11 2018 
+lib64drwxr-xr-x. 2 root root   6 4月  11 2018 
+libexecdrwxr-xr-x. 3 root root  51 8月  18 10:04 
+redisdrwxr-xr-x. 2 root root   6 4月  11 2018 
+sbindrwxr-xr-x. 5 root root  49 8月   9 22:42 
+sharedrwxr-xr-x. 2 root root   6 4月  11 2018 src
 ```
 
 <table>
@@ -321,7 +377,10 @@ Linux系统的应用非常广泛，不仅可以长时间的运行我们编写的
 **修改文件/目录的权限的命令：chmod**
 
 ```shell
-# 示例：修改/test下的aaa.txt的权限为属主有全部权限，属主所在的组有读写权限，其他用户只有读的权限[root@localhost ~]# chmod u=rwx,g=rw,o=r aaa.txt# 上述示例还可以使用数字表示：[root@localhost ~]# chmod 764 aaa.txt
+# 示例：修改/test下的aaa.txt的权限为属主有全部权限，属主所在的组有读写权限，其他用户只有读的权限
+[root@localhost ~]# chmod u=rwx,g=rw,o=r aaa.txt
+# 上述示例还可以使用数字表示：
+[root@localhost ~]# chmod 764 aaa.txt
 ```
 
 # 5、用户组及用户
@@ -329,13 +388,18 @@ Linux系统的应用非常广泛，不仅可以长时间的运行我们编写的
 ## 5.1、用户组
 
 ```shell
-# 添加用户组：
+# 添加用户组
 [root@localhost ~]# groupadd dev
-# 修改组[root@localhost ~] groupmod -n dev  dev1 
-# 删除用户组：[root@localhost ~]# groupdel dev
-# 查询组：[root@localhost ~]# cat /etc/group 
-# 或者使用管道来精确查询 [root@localhost ~]# cat /etc/group | grep dev
-# 查看当前登录用户所在的组 groups[root@localhost ~]# groups someuser
+# 修改组
+[root@localhost ~] groupmod -n dev  dev1 
+# 删除用户组
+[root@localhost ~]# groupdel dev
+# 查询组
+[root@localhost ~]# cat /etc/group 
+# 或者使用管道来精确查询 
+[root@localhost ~]# cat /etc/group | grep dev
+# 查看当前登录用户所在的组 groups
+[root@localhost ~]# groups someuser
 ```
 
 ## 5.2、用户
@@ -531,20 +595,20 @@ exec gnome-session
 
 **安装vm-tools：**`yum install open-vm-tools`
 
-**一、安装samba**
+- **安装samba**
 
 ```
 [root@localhost ~]# yum install samba samba-common samba-client
 ```
 
-**二、添加用户** 如果想省事,直接使用root用户即可(在测试环境下建议使用root,方便开发)
+- **添加用户** 如果想省事,直接使用root用户即可(在测试环境下建议使用root,方便开发)
 
 ```
 [root@localhost ~]# groupadd samba
 [root@localhost ~]# useradd -g samba samba
 ```
 
-**三、修改配置**
+- **修改配置**
 
 一般配置路径是：/etc/samba/smb.conf,先查找smb.conf确认路径
 
@@ -575,7 +639,7 @@ exec gnome-session
 >
 > write：可写入共享的用户列表
 
-**四、启动服务**
+- **启动服务**
 
 ```shell
 // 关闭防火墙
