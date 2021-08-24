@@ -87,8 +87,39 @@ git config --global --unset https.proxy
   以win10为例，将`C:\Windows\System32\drivers\etc\hosts`文件拷贝到桌面（因为该文件是在C盘如果你不拷贝出来是无法进行修改的），打开该文件添加两行：
 
   ```
-  199.232.68.133 raw.githubusercontent.com
-  199.232.68.133 githubusercontent.com
+# GitHub Start
+140.82.113.3      github.com
+140.82.114.20     gist.github.com
+
+151.101.184.133    assets-cdn.github.com
+151.101.184.133    raw.githubusercontent.com
+199.232.28.133     raw.githubusercontent.com
+151.101.184.133    gist.githubusercontent.com
+151.101.184.133    cloud.githubusercontent.com
+151.101.184.133    camo.githubusercontent.com
+199.232.96.133     avatars.githubusercontent.com
+151.101.184.133    avatars0.githubusercontent.com
+199.232.68.133     avatars0.githubusercontent.com
+199.232.28.133     avatars0.githubusercontent.com
+199.232.28.133     avatars1.githubusercontent.com
+151.101.184.133    avatars1.githubusercontent.com
+151.101.108.133    avatars1.githubusercontent.com
+151.101.184.133    avatars2.githubusercontent.com
+199.232.28.133     avatars2.githubusercontent.com
+151.101.184.133    avatars3.githubusercontent.com
+199.232.68.133     avatars3.githubusercontent.com
+151.101.184.133    avatars4.githubusercontent.com
+199.232.68.133     avatars4.githubusercontent.com
+151.101.184.133    avatars5.githubusercontent.com
+199.232.68.133     avatars5.githubusercontent.com
+151.101.184.133    avatars6.githubusercontent.com
+199.232.68.133     avatars6.githubusercontent.com
+151.101.184.133    avatars7.githubusercontent.com
+199.232.68.133     avatars7.githubusercontent.com
+151.101.184.133    avatars8.githubusercontent.com
+199.232.68.133     avatars8.githubusercontent.com
+199.232.96.133     avatars9.githubusercontent.com
+# GitHub End
   ```
 
   将修改后的hosts文件放回`C:\Windows\System32\drivers\etc\`目录下。
