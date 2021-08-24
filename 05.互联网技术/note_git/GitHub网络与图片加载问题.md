@@ -86,8 +86,8 @@ git config --global --unset https.proxy
 
   以win10为例，将`C:\Windows\System32\drivers\etc\hosts`文件拷贝到桌面（因为该文件是在C盘如果你不拷贝出来是无法进行修改的），打开该文件添加两行：
 
-  ```
-# GitHub Start
+```
+#GitHub Start
 140.82.113.3      github.com
 140.82.114.20     gist.github.com
 
@@ -119,7 +119,7 @@ git config --global --unset https.proxy
 151.101.184.133    avatars8.githubusercontent.com
 199.232.68.133     avatars8.githubusercontent.com
 199.232.96.133     avatars9.githubusercontent.com
-# GitHub End
+#GitHub End
   ```
 
   将修改后的hosts文件放回`C:\Windows\System32\drivers\etc\`目录下。
