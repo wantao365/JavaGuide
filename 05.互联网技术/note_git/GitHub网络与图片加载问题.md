@@ -6,7 +6,7 @@
 
 发生这种情况是因为代理是在git中配置的。既然它是https代理（而不是http）git config http.proxy和git config --global http.proxy也无济于事。
 
-**解决方案一 **
+**解决方案一**
 
 1、看看你的git配置
 
