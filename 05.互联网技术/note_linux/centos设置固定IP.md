@@ -51,13 +51,38 @@
   重启服务器：reboot（也可以不重启）
   ```
 
+ping 不通百度（能ping通ip）出现ping: baidu.com: 未知的名称或服务
+
+> ```shell
+> vim etc/resolv.conf
+>  
+> # 添加域名服务器
+>  
+> nameserver 192.168.216.2 与gateway相同
+> nameserver 114.114.114.114 
+> [root@localhost ~]# systemctl restart network.service  #network-manager
+> 
+> # 关闭电源休眠
+> Centos7 取消省电模式与屏幕待机
+> 直接输入命令：
+> setterm -blank 0 -powersave off -powerdown 0
+> 
+> ssh远程输入命令可能会报错，需要直接在tty1上输入
+> # 重启后失效
+> # 加入开机自动执行
+> chmod +x /etc/rc.d/rc.local
+> echo "setterm -blank 0 -powersave off -powerdown 0" >> /etc/rc.d/rc.local
+> ```
+
+
+
 > 更新一些问题解决
 > 1、克隆一份虚拟机后，ip地址不存在如何解决，network起不来现象：
 >
 > ![](images/1.png)
 >
 > 解决办法：
-> 
+>
 > ①[failed-to-start-lsb-bring-up-down-networking](https://www.cyberithub.com/failed-to-start-lsb-bring-up-down-networking/)
 >
 > ②[各种姿势解决CentOS 7下无法启动网络的问题](https://cloud.tencent.com/developer/article/1354933)
