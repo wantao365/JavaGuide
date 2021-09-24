@@ -47,8 +47,7 @@
   
 - 第六步:重启
   ```
-  重启网络服务：service network restart
-  重启服务器：reboot（也可以不重启）
+  重启网络服务：nmcli c reload ens33
   ```
 
 ping 不通百度（能ping通ip）出现ping: baidu.com: 未知的名称或服务
