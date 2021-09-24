@@ -47,7 +47,7 @@
   
 - 第六步:重启
   ```
-  启动ens33网卡：```ifup ens33/ifdown ens33```
+  启动ens33网卡：ifup ens33/ifdown ens33
   
   ```
 
