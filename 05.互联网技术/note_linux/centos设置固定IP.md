@@ -47,7 +47,8 @@
   
 - 第六步:重启
   ```
-  重启网络服务：nmcli c reload ens33
+  启动ens33网卡：```ifup ens33/ifdown ens33```
+  
   ```
 
 ping 不通百度（能ping通ip）出现ping: baidu.com: 未知的名称或服务
