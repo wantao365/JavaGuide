@@ -62,6 +62,8 @@
 
 ```sudo ln -s /usr/lib64/libncurses.so.6.1 /usr/lib64/libncurses.so.5``
 
+> 查看依赖包来源：yum provides */ibvulkan.so.1
+> root下在线安装依赖：yum -y install vulkan-1.1.97.0-1.el7.x86_64
 # 二、服务启停
 
 ## 1、查看服务状态
