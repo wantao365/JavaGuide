@@ -693,6 +693,9 @@ exec gnome-session
 >
 > ```shell
 > chown -R 用户名 文件名
+> 
+> chmod -R 777 /home/test/myshare
+> chown -R test:test /home/test
 > ```
 
 # 9、Vim命令合集
