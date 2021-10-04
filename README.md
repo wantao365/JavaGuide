@@ -7,6 +7,9 @@
 #### 使用说明
     未经授权，禁止他用。侵权必究！
     图片无法访问可修改host IPAddress.com
+    ipconfig /displaydns # 显示dns缓存 
+    ipconfig /flushdns # 刷新DNS记录 
+    ipconfig /renew # 重请从DHCP服务器获得IP 
 
 #### 参与贡献
 
