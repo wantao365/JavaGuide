@@ -26,4 +26,4 @@
 
     Copyright © 2021 wan.tao 保留所有权利
 
-[雁南飞渡唯一博客](https://blog.csdn.net/qq_34755766/) 其他均为盗版。
+[雁南飞渡唯一博客](https://blog.csdn.net/qq_34755766/) 不再长期更新。其他均为盗版。
