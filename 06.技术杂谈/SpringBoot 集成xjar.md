@@ -179,6 +179,7 @@ nohup java -jar /path/to/encrypted.jar --xjar.keyfile=/path/to/xjar.key      > n
                     <goals>
                         <goal>build</goal>
                     </goals>
+                    <!--  <phase>none</phase> -->
                     <phase>package</phase>
                     <configuration>
                         <includes>
