@@ -61,7 +61,7 @@ Spring Boot JAR 安全加密运行工具，同时支持的原生JAR。
   > mvn install:install-file -Dfile=F:\GuGeDonwLoad\loadkit-v1.0.0.jar   -DgroupId=com.github.core-lib -DartifactId=loadkit -Dversion=v1.0.0 -Dpackaging=jar
   > ```
 
-  贴出一段执行的效果，已经把对应的jar包通过mvn下载到默认的仓库路劲了，如果我们idea-maven仓库下载路劲在别的目录，可以打开刚编译过的目录下，拷贝至自定义的目录下。这时pom文件会自动刷新，也就不会爆红了。
+  执行之后，已经把对应的jar包通过mvn下载到默认的仓库路劲了，如果我们idea-maven仓库下载路劲在别的目录，可以打开刚编译过的目录下，拷贝至自定义的目录下。这时pom文件会自动刷新，也就不会爆红了。
 
 ## 2.加密jar
 
@@ -165,6 +165,7 @@ nohup java -jar /path/to/encrypted.jar --xjar.keyfile=/path/to/xjar.key      > n
         <plugin>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-maven-plugin</artifactId>
+            <!-- XJar 加密之后找不到main可添加 -->
             <configuration>
                 <mainClass>com.example.demo.DemoApplication</mainClass>
             </configuration>
