@@ -1,4 +1,8 @@
 > 在使用之前，你需要下载arcgis的离线安装包，然后最好下载一个nginx，用来管理arcgis api和地图碎片管理。同时你应该下载离线地图下载器，将地图碎片下载到本地，放入/arcgis/map文件夹，注意路径1,2,3.....
+>
+> ```
+> npm i esri-loader --save-dev
+> ```
 
 # nginx 配置
 
