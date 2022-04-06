@@ -57,7 +57,7 @@ http {
         listen       9097;
         server_name  localhost;
         charset utf-8;
-        root  /home/LdRun/data/nginx/html/ldCable/webpages;
+        root  /home/data/nginx/html/webpages;
         index index.html index.htm;
         location /platform-boot/ {
             proxy_pass http://127.0.0.1:9402;
