@@ -271,6 +271,9 @@ Linux系统的应用非常广泛，不仅可以长时间的运行我们编写的
 
 # 管道命令搜索指定进程
 [root@localhost ~]# ps -ef | grep java
+
+# 查看端口对应的进程
+[root@localhost ~]# lsof -i :8089
 ```
 
 ### 3.4.3、关闭进程
@@ -340,6 +343,13 @@ Linux系统的应用非常广泛，不仅可以长时间的运行我们编写的
 
 # 在时间为20:35时候重启(root用户使用)   
 [root@localhost ~]# shutdown -r 20:35     
+```
+
+### 3.4.8 网络抓包
+
+```shell
+# 网络抓包 
+[root@localhost ~]# tcpdump -i enp5s0 tcp and host 192.168.1.27 -w /home/test.cap
 ```
 
 # 4、Linux权限与分配
