@@ -89,6 +89,8 @@ Linux系统的应用非常广泛，不仅可以长时间的运行我们编写的
 [root@localhost ~]# usermod -d /home/test -G test2 test 
 # 示例：将用户test加入到test2组
 [root@localhost ~]#  gpasswd -a test test2 
+或者
+[root@localhost ~]#  usermod -g test2 test
 # 示例：将用户test从test2组中移出
 [root@localhost ~]# gpasswd -d test test2 
 # 设置用户不能修改密码
