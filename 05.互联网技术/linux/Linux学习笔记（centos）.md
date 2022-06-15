@@ -80,7 +80,7 @@ Linux系统的应用非常广泛，不仅可以长时间的运行我们编写的
 [root@localhost ~]# cat /etc/group | grep dev
 # 查看当前登录用户所在的组 groups
 [root@localhost ~]# groups someuser
-# 注意：-m 自动建立用户家目录； -g 指定用户所在的组，否则会建立一个和用户名同名的组 
+# 注意：-m 自动建立用户加目录； -g 指定用户所在的组，否则会建立一个和用户名同名的组 
 [root@localhost ~]# useradd -m -g dev test1
 # 修改用户 
 # 示例：修改和创建密码 passwd 用户名    如果不加用户名则默认修改当前登录者的密码
@@ -108,6 +108,8 @@ Linux系统的应用非常广泛，不仅可以长时间的运行我们编写的
 [root@localhost ~]# who
 # 示例：查看当前登录用户名
 [root@localhost ~]# whoami
+# 将用户加入到wheel组，即可使用sudo权限
+[root@localhost ~]# whoamiusermod -a -G wheel someuser
 ```
 
 # 5、权限与分配
