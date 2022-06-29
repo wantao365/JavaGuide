@@ -109,7 +109,7 @@ Linux系统的应用非常广泛，不仅可以长时间的运行我们编写的
 # 示例：查看当前登录用户名
 [root@localhost ~]# whoami
 # 将用户加入到wheel组，即可使用sudo权限
-[root@localhost ~]# whoamiusermod -a -G wheel someuser
+[root@localhost ~]# usermod -a -G wheel someuser
 ```
 
 # 5、权限与分配
@@ -136,6 +136,8 @@ sharedrwxr-xr-x. 2 root root   6 4月  11 2018 src
 [root@localhost ~]# chmod u=rwx,g=rw,o=r aaa.txt
 # 上述示例还可以使用数字表示：
 [root@localhost ~]# chmod 764 aaa.txt
+#修改某个目录(包括子目录)为某有用户(user3)
+[root@localhost ~]# chown -R user3 /opt/cki/ruoyi/automonitor/app
 ```
 
 <table>
