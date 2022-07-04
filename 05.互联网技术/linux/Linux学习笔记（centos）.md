@@ -108,7 +108,7 @@ Linux系统的应用非常广泛，不仅可以长时间的运行我们编写的
 [root@localhost ~]# who
 # 示例：查看当前登录用户名
 [root@localhost ~]# whoami
-# 将用户加入到wheel组，即可使用sudo权限
+# 将用户加入到wheel组，即可使用sudo权限，相当于管理员
 [root@localhost ~]# usermod -a -G wheel someuser
 ```
 
