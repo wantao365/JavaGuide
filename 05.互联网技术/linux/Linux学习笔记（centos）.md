@@ -3060,7 +3060,7 @@ rpm -Uvh --force --nodeps xrdp-0.9.16-2.el7.x86_64.rpm
 
 > mysql官网下载rpm包，并进行筛选一下必须的5个安装包
 >
-> ![](/images/mysql1.jpg)-
+> ![](images/mysql1.jpg)
 
 - 执行并进行安装：```rpm -Uvh --force --nodeps *.rpm```
 
