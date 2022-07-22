@@ -3046,9 +3046,81 @@ sed -i '3s/原字符串/新字符串/g' ab.txt
 
 ## 7.1、安装远程桌面（Xrdp）
 
+```shell
+rpm -Uvh --force --nodeps xrdp-0.9.16-2.el7.x86_64.rpm
+```
+
+> 直接安装即可使用，需要注意是否成功启动xrdp及防火墙或者xrdp默认端口：3389
+
 ## 7.2、文件夹共享（Samba）
 
-## 7.3、mysql（5.7.*）
+
+
+## 7.3、mysql
+
+> mysql官网下载rpm包，并进行筛选一下必须的5个安装包
+>
+> ![](/images/mysql1.jpg)-
+
+- 执行并进行安装：```rpm -Uvh --force --nodeps *.rpm```
+
+- 获取零时密码：```grep "password" /var/log/mysqld.log```
+
+  - 登录MySQL修改root密码： 
+
+    ```shell
+    #修改密码
+    ALTER USER 'root'@'localhost' IDENTIFIED BY 'Bb123456.';
+    
+    #切换数据库
+    use mysql;
+    select host, user, authentication_string, plugin from user;
+     
+    #查看user表的root用户Host字段是localhost，说明root用户只能本地登录，现在把他改成远程登录
+    update user set host='%' where user='root';
+    
+    #刷新权限
+    flush privileges;
+    
+    #修改mysql加密规则
+    ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'Bb123456.';
+    ```
+
+  - 无法获取root密码
+
+    ```shell
+    # 修改mysql免密码登录找到mysql的my.cnf配置文件在mysqld组加上一行
+    skip-grant-tables
+    # 启mysql服务
+    systemctl restart mysqld
+    
+    # 入密码时直接敲回车
+    mysql -u root -p 
+    use mysql 
+    # 码置空
+    update user set authentication_string = '' where user = 'root';
+    quit //退出
+    
+    # 消my.cnf免密登录并重启mysqld使其配置生效,并重启mysql服务
+    # 输入密码时直接敲回车，刚刚已经将密码置空了
+    mysql -u root -p 
+    # 修改密码过于简单会报错
+    ALTER USER 'root'@'localhost' IDENTIFIED BY 'Bb123456.'
+    ```
+
+> 反编译rpm再打包安装
+>
+> 需要工具：rpmrebuild-2.14.tar.gz、rpm-build、rpmdevtools
+>
+> 第一步：安装需要修改的软件：```rpm -Uvh --force --nodeps *.rpm```，然后提取spec文件
+>
+> 第二步：解压rpmrebuild-2.14.tar.gz到根目录下rpmbuild，创建BUILDROOT、SPECS。安装对应的rpm，然后提取spec文件```./rpmrebuild.sh -s /root/rpmbuild/SPECS/nginx.spec nginx-release-centos-7-0.el7.ngx.noarch```
+>
+> 第三步：进入BUILDROOT，创建打包的软件名文件夹，将rpm包放进去
+>
+> 第四步：解压rpm ```rpm2cpio *.rpm | cpio -idv```
+>
+> 第五步：执行```rpmbuild -ba nginx.spec```，到对应的RPM目录下就可以看到重新生成的RPM包，如/root/rpmbuild/RPMS/x86_64/
 
 ## 7.4、redis
 
