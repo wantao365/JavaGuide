@@ -3089,7 +3089,7 @@ rpm -Uvh --force --nodeps xrdp-0.9.16-2.el7.x86_64.rpm
   - 无法获取root密码
 
     ```shell
-    # 修改mysql免密码登录找到mysql的my.cnf配置文件在mysqld组加上一行
+    # 修改mysql免密码登录找到etc mysql的my.cnf配置文件在mysqld组加上一行
     skip-grant-tables
     # 启mysql服务
     systemctl restart mysqld
@@ -3105,7 +3105,7 @@ rpm -Uvh --force --nodeps xrdp-0.9.16-2.el7.x86_64.rpm
     # 输入密码时直接敲回车，刚刚已经将密码置空了
     mysql -u root -p 
     # 修改密码过于简单会报错
-    ALTER USER 'root'@'localhost' IDENTIFIED BY 'Bb123456.'
+    ALTER USER 'root'@'localhost' IDENTIFIED BY 'Bb123456.';
     ```
 
 > 反编译rpm再打包安装
