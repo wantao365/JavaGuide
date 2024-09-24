@@ -15,7 +15,15 @@
 ### 目录
 [layui-doc](https://github.com/wantao365/layui-doc)
 
-[数据结构与算法Java版](https://github.com/wantao365/algorithm)
+[induction-note](https://github.com/wantao365/induction-note)
+
+[Java Swing](https://github.com/wantao365/Java-Swing)
+
+[technical-blog](https://github.com/wantao365/technical-blog)
+
+[algorithm](https://github.com/wantao365/algorithm)
+
+[daily-notes](https://github.com/wantao365/daily-notes)
 
 #### 参与贡献
 
