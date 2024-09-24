@@ -12,6 +12,10 @@
     ipconfig /renew # 重请从DHCP服务器获得IP 
     SwitchHosts：远程 24h https://raw.hellogithub.com/hosts
 
+### 目录
+    [layui-doc](https://github.com/wantao365/layui-doc)
+    [数据结构与算法Java版](https://github.com/wantao365/algorithm)
+
 #### 参与贡献
 
     笔记内容大多是手敲，所以难免会有笔误，你可以帮我找错别字。
