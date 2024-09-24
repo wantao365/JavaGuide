@@ -10,6 +10,7 @@
     ipconfig /displaydns # 显示dns缓存 
     ipconfig /flushdns # 刷新DNS记录 
     ipconfig /renew # 重请从DHCP服务器获得IP 
+    SwitchHosts：远程 24h https://raw.hellogithub.com/hosts
 
 #### 参与贡献
 
