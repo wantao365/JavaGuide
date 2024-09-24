@@ -13,8 +13,9 @@
     SwitchHosts：远程 24h https://raw.hellogithub.com/hosts
 
 ### 目录
-    [layui-doc](https://github.com/wantao365/layui-doc)
-    [数据结构与算法Java版](https://github.com/wantao365/algorithm)
+[layui-doc](https://github.com/wantao365/layui-doc)
+
+[数据结构与算法Java版](https://github.com/wantao365/algorithm)
 
 #### 参与贡献
 
